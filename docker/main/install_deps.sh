@@ -29,7 +29,7 @@ echo "libedgetpu1-max libedgetpu/accepted-eula select true" | debconf-set-select
 
 # enable non-free repo in Debian
 if grep -q "Debian" /etc/issue; then
-    sed -i -e's/ main/ main contrib non-free/g' /etc/apt/sources.list
+    sed -i -e's/ main/ main contrib non-free/g' /etc/apt/sources.list.d/debian.sources
 fi
 
 # coral drivers
